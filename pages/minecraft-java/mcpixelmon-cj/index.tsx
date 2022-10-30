@@ -5,6 +5,10 @@ import Link from 'next/link'
 const McPixelmonCjPage: NextPage<{}> = () => {
   return (
     <div>
+      <Head>
+        <title>imlgames.aoirint.com</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <nav className="navbar is-fixed-top">
         <div className="navbar-menu">
           <div className="navbar-start">

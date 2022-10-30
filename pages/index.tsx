@@ -263,6 +263,9 @@ function Main() {
                   </code>
                 </td>
                 <td>
+                  TShock 1.4.3.6
+                </td>
+                <td>
                   <Link href="terraria/terraria-aur2/">
                     Link
                   </Link>

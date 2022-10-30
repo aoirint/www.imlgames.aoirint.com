@@ -1,14 +1,10 @@
+import { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 
-export default function Home() {
+const McPixelmonCjPage: NextPage<{}> = () => {
   return (
     <div>
-      <Head>
-        <html className='has-navbar-fixed-top' />
-        <title>imlgames.aoirint.com</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <nav className="navbar is-fixed-top">
         <div className="navbar-menu">
           <div className="navbar-start">
@@ -65,3 +61,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default McPixelmonCjPage

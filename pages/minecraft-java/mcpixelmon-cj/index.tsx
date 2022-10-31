@@ -27,6 +27,16 @@ const McPixelmonCjPage: NextPage<{}> = () => {
         <Typography variant='body1'>
           2. いいい
         </Typography>
+        <Box sx={{ mt: 6 }} />
+        <Typography variant='h4' component='h2' sx={{ mb: 2 }}>
+          環境構築
+        </Typography>
+        <Typography variant='body1'>
+          1. あああ
+        </Typography>
+        <Typography variant='body1'>
+          2. いいい
+        </Typography>
       </Container>
     </div>
   )

@@ -25,19 +25,19 @@ const Home: NextPage<{}> = () => {
         </Typography>
         <Box sx={{ mt: 2 }} />
         <MinecraftJavaServersTable />
-        <Box sx={{ mt: 4 }} />
+        <Box sx={{ mt: 6 }} />
         <Typography variant='h5' component='h3'>
           Minecraft（Bedrock版）
         </Typography>
         <Box sx={{ mt: 2 }} />
         <MinecraftBedrockServersTable />
-        <Box sx={{ mt: 4 }} />
+        <Box sx={{ mt: 6 }} />
         <Typography variant='h5' component='h3'>
           ARK: Survival Evolved
         </Typography>
         <Box sx={{ mt: 2 }} />
         <ArkServersTable />
-        <Box sx={{ mt: 4 }} />
+        <Box sx={{ mt: 6 }} />
         <Typography variant='h5' component='h3'>
           Terraria
         </Typography>

@@ -1,6 +1,8 @@
+
+import { Box, Container, Typography } from '@mui/material'
 import { NextPage } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
+import ChildNavbar from '../../../components/ChildNavbar'
 
 const McPixelmonCjPage: NextPage<{}> = () => {
   return (
@@ -9,59 +11,23 @@ const McPixelmonCjPage: NextPage<{}> = () => {
         <title>imlgames.aoirint.com</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav className="navbar is-fixed-top">
-        <div className="navbar-menu">
-          <div className="navbar-start">
-            <Link className="navbar-item" href="/">
-              <button className='button'>
-                &lt;
-              </button>
-            </Link>
-          </div>
-        </div>
-      </nav>
-      <section className="section mt-6">
-        <div className="container">
-          <h1 className="title">
-            mcpixelmon-cj
-          </h1>
-          <h2 className="subtitle">
-            Minecraft Java版 ゲームサーバ
-          </h2>
-          <div className='content'>
-            <h3>参加方法</h3>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-          </div>
-        </div>
-      </section>
+      <ChildNavbar
+        title='mcpixelmon-cj'
+        subtitle='Minecraft Java版ゲームサーバ'
+        backButtonHref='/'
+      />
+      <Box sx={{ mt: 3 }} />
+      <Container>
+        <Typography variant='h4' component='h2' sx={{ mb: 2 }}>
+          参加方法
+        </Typography>
+        <Typography variant='body1'>
+          1. あああ
+        </Typography>
+        <Typography variant='body1'>
+          2. いいい
+        </Typography>
+      </Container>
     </div>
   )
 }

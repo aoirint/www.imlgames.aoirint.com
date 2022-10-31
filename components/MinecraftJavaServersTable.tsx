@@ -52,66 +52,60 @@ const minecraftJavaServers: MinecraftJavaServer[] = [
 
 const MinecraftJavaServersTable: React.FC<{}> = () => {
   return (
-    <>
-      <Typography variant='h5' component='h3'>
-        Minecraft（Java版）
-      </Typography>
-      <Box sx={{ mt: 2 }} />
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Name</TableCell>
-              <TableCell>Address</TableCell>
-              <TableCell>Server Type</TableCell>
-              <TableCell>Server Version</TableCell>
-              <TableCell>Readme</TableCell>
-              <TableCell>Web Map</TableCell>
-              <TableCell>Status</TableCell>
+    <TableContainer component={Paper}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell>Address</TableCell>
+            <TableCell>Server Type</TableCell>
+            <TableCell>Server Version</TableCell>
+            <TableCell>Readme</TableCell>
+            <TableCell>Web Map</TableCell>
+            <TableCell>Status</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {minecraftJavaServers.map((server) => (
+            <TableRow key={server.name}>
+              <TableCell>{server.name}</TableCell>
+              <TableCell>
+                <Box sx={{
+                  fontFamily: 'Monospace',
+                  display: 'inline',
+                  px: 1.5,
+                  py: 1,
+                  bgcolor: 'grey.100',
+                  color: '#da1039',
+                  borderRadius: 2,
+                  fontSize: '0.875em',
+                  fontWeight: 700,
+                }}>
+                  {server.address}
+                </Box>
+              </TableCell>
+              <TableCell>{server.serverType}</TableCell>
+              <TableCell>{server.serverVersion}</TableCell>
+              <TableCell>
+                <MaterialLink component={NextLink} href={server.readmeHref}>
+                  Link
+                </MaterialLink>
+              </TableCell>
+              <TableCell>
+                {server.webMapHref !== undefined ? (
+                <MaterialLink component={NextLink} href={server.webMapHref}>
+                  Link
+                </MaterialLink>
+                ) : ''}
+              </TableCell>
+              <TableCell>
+                <Chip label={server.status == 'running' ? 'Running' : 'Stopped'} color={server.status == 'running' ? 'success' : 'error'} />
+              </TableCell>
             </TableRow>
-          </TableHead>
-          <TableBody>
-            {minecraftJavaServers.map((server) => (
-              <TableRow key={server.name}>
-                <TableCell>{server.name}</TableCell>
-                <TableCell>
-                  <Box sx={{
-                    fontFamily: 'Monospace',
-                    display: 'inline',
-                    px: 1.5,
-                    py: 1,
-                    bgcolor: 'grey.100',
-                    color: '#da1039',
-                    borderRadius: 2,
-                    fontSize: '0.875em',
-                    fontWeight: 700,
-                  }}>
-                    {server.address}
-                  </Box>
-                </TableCell>
-                <TableCell>{server.serverType}</TableCell>
-                <TableCell>{server.serverVersion}</TableCell>
-                <TableCell>
-                  <MaterialLink component={NextLink} href={server.readmeHref}>
-                    Link
-                  </MaterialLink>
-                </TableCell>
-                <TableCell>
-                  {server.webMapHref !== undefined ? (
-                  <MaterialLink component={NextLink} href={server.webMapHref}>
-                    Link
-                  </MaterialLink>
-                  ) : ''}
-                </TableCell>
-                <TableCell>
-                  <Chip label={server.status == 'running' ? 'Running' : 'Stopped'} color={server.status == 'running' ? 'success' : 'error'} />
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   )
 }
 

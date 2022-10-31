@@ -1,4 +1,4 @@
-import { Box, Container } from '@mui/material'
+import { Box, Container, Typography } from '@mui/material'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import HomeNavbar from '../components/HomeNavbar'
@@ -17,6 +17,10 @@ const Home: NextPage<{}> = () => {
       />
       <Box sx={{ mt: 3 }} />
       <Container>
+        <Typography variant='h5' component='h3'>
+          Minecraft（Java版）
+        </Typography>
+        <Box sx={{ mt: 2 }} />
         <MinecraftJavaServersTable />
       </Container>
     </div>

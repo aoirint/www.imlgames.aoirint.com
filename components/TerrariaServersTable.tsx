@@ -39,16 +39,19 @@ const TerrariaServersTable: React.FC<{}> = () => {
         <TableHead>
           <TableRow>
             <TableCell>Name</TableCell>
+            <TableCell>Status</TableCell>
             <TableCell>Address</TableCell>
             <TableCell>Server Version</TableCell>
             <TableCell>Readme</TableCell>
-            <TableCell>Status</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {terrariaServers.map((server) => (
             <TableRow key={server.name}>
               <TableCell>{server.name}</TableCell>
+              <TableCell>
+                <Chip label={server.status == 'running' ? 'Running' : 'Stopped'} color={server.status == 'running' ? 'success' : 'error'} />
+              </TableCell>
               <TableCell>
                 <InlineCodeBox>
                   {server.address}
@@ -59,9 +62,6 @@ const TerrariaServersTable: React.FC<{}> = () => {
                 <MaterialLink component={NextLink} href={server.readmeHref}>
                   Link
                 </MaterialLink>
-              </TableCell>
-              <TableCell>
-                <Chip label={server.status == 'running' ? 'Running' : 'Stopped'} color={server.status == 'running' ? 'success' : 'error'} />
               </TableCell>
             </TableRow>
           ))}

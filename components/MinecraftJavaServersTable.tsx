@@ -58,18 +58,21 @@ const MinecraftJavaServersTable: React.FC<{}> = () => {
         <TableHead>
           <TableRow>
             <TableCell>Name</TableCell>
+            <TableCell>Status</TableCell>
             <TableCell>Address</TableCell>
             <TableCell>Server Type</TableCell>
             <TableCell>Server Version</TableCell>
             <TableCell>Readme</TableCell>
             <TableCell>Web Map</TableCell>
-            <TableCell>Status</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {minecraftJavaServers.map((server) => (
             <TableRow key={server.name}>
               <TableCell>{server.name}</TableCell>
+              <TableCell>
+                <Chip label={server.status == 'running' ? 'Running' : 'Stopped'} color={server.status == 'running' ? 'success' : 'error'} />
+              </TableCell>
               <TableCell>
                 <InlineCodeBox>
                   {server.address}
@@ -88,9 +91,6 @@ const MinecraftJavaServersTable: React.FC<{}> = () => {
                   Link
                 </MaterialLink>
                 ) : ''}
-              </TableCell>
-              <TableCell>
-                <Chip label={server.status == 'running' ? 'Running' : 'Stopped'} color={server.status == 'running' ? 'success' : 'error'} />
               </TableCell>
             </TableRow>
           ))}

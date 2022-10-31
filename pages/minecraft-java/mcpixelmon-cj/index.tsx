@@ -20,7 +20,7 @@ const McPixelmonCjPage: NextPage<{}> = () => {
           </div>
         </div>
       </nav>
-      <section className="section">
+      <section className="section mt-6">
         <div className="container">
           <h1 className="title">
             mcpixelmon-cj

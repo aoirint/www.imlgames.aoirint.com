@@ -4,7 +4,6 @@
 
 ```shell
 npm run build
-npm run export
 ```
 
 Deploy `./out`.

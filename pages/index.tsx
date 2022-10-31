@@ -2,6 +2,7 @@ import { Box, Container, Typography } from '@mui/material'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import HomeNavbar from '../components/HomeNavbar'
+import MinecraftBedrockServersTable from '../components/MinecraftBedrockServersTable'
 import MinecraftJavaServersTable from '../components/MinecraftJavaServersTable'
 
 const Home: NextPage<{}> = () => {
@@ -22,6 +23,12 @@ const Home: NextPage<{}> = () => {
         </Typography>
         <Box sx={{ mt: 2 }} />
         <MinecraftJavaServersTable />
+        <Box sx={{ mt: 4 }} />
+        <Typography variant='h5' component='h3'>
+          Minecraft（Bedrock版）
+        </Typography>
+        <Box sx={{ mt: 2 }} />
+        <MinecraftBedrockServersTable />
       </Container>
     </div>
   )

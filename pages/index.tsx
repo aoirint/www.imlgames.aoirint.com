@@ -5,6 +5,7 @@ import ArkServersTable from '../components/ArkServersTable'
 import HomeNavbar from '../components/HomeNavbar'
 import MinecraftBedrockServersTable from '../components/MinecraftBedrockServersTable'
 import MinecraftJavaServersTable from '../components/MinecraftJavaServersTable'
+import TerrariaServersTable from '../components/TerrariaServersTable'
 
 const Home: NextPage<{}> = () => {
   return (
@@ -32,10 +33,17 @@ const Home: NextPage<{}> = () => {
         <MinecraftBedrockServersTable />
         <Box sx={{ mt: 4 }} />
         <Typography variant='h5' component='h3'>
-        ARK: Survival Evolved
+          ARK: Survival Evolved
         </Typography>
         <Box sx={{ mt: 2 }} />
         <ArkServersTable />
+        <Box sx={{ mt: 4 }} />
+        <Typography variant='h5' component='h3'>
+          Terraria
+        </Typography>
+        <Box sx={{ mt: 2 }} />
+        <TerrariaServersTable />
+        <Box sx={{ mt: 6 }} />
       </Container>
     </div>
   )

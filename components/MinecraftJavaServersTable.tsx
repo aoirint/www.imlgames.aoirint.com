@@ -1,5 +1,6 @@
 import { Box, Chip, Container, Link as MaterialLink, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material'
 import NextLink from 'next/link'
+import InlineCodeBox from './InlineCodeBox'
 
 type ServerStatus = 'running' | 'stopped'
 
@@ -70,19 +71,9 @@ const MinecraftJavaServersTable: React.FC<{}> = () => {
             <TableRow key={server.name}>
               <TableCell>{server.name}</TableCell>
               <TableCell>
-                <Box sx={{
-                  fontFamily: 'Monospace',
-                  display: 'inline',
-                  px: 1.5,
-                  py: 1,
-                  bgcolor: 'grey.100',
-                  color: '#da1039',
-                  borderRadius: 2,
-                  fontSize: '0.875em',
-                  fontWeight: 700,
-                }}>
+                <InlineCodeBox>
                   {server.address}
-                </Box>
+                </InlineCodeBox>
               </TableCell>
               <TableCell>{server.serverType}</TableCell>
               <TableCell>{server.serverVersion}</TableCell>

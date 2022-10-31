@@ -1,0 +1,9 @@
+{
+  "name": "imlgames.aoirint.com",
+  "short_name": "imlgames",
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

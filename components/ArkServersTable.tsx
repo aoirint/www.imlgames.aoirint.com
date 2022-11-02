@@ -30,9 +30,6 @@ const ArkServersTable: React.FC<{}> = () => {
           <TableRow>
             <TableCell>Name</TableCell>
             <TableCell>Status</TableCell>
-            <TableCell>Address</TableCell>
-            <TableCell>Server Version</TableCell>
-            <TableCell>Readme</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -41,17 +38,6 @@ const ArkServersTable: React.FC<{}> = () => {
               <TableCell>{server.name}</TableCell>
               <TableCell>
                 <Chip label={server.status == 'running' ? 'Running' : 'Stopped'} color={server.status == 'running' ? 'success' : 'error'} />
-              </TableCell>
-              <TableCell>
-                <InlineCodeBox>
-                  {server.address}
-                </InlineCodeBox>
-              </TableCell>
-              <TableCell>{server.serverVersion}</TableCell>
-              <TableCell>
-                <MaterialLink component={NextLink} href={server.readmeHref}>
-                  Link
-                </MaterialLink>
               </TableCell>
             </TableRow>
           ))}

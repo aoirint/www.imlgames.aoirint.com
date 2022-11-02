@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Container, Grid, Typography } from '@mui/material'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import ArkServersTable from '../components/ArkServersTable'
@@ -20,30 +20,40 @@ const Home: NextPage<{}> = () => {
       />
       <Box sx={{ mt: 3 }} />
       <Container>
-        <Typography variant='h5' component='h3'>
-          Minecraft（Java版）
-        </Typography>
-        <Box sx={{ mt: 2 }} />
-        <MinecraftJavaServersTable />
-        <Box sx={{ mt: 6 }} />
-        <Typography variant='h5' component='h3'>
-          Minecraft（Bedrock版）
-        </Typography>
-        <Box sx={{ mt: 2 }} />
-        <MinecraftBedrockServersTable />
-        <Box sx={{ mt: 6 }} />
-        <Typography variant='h5' component='h3'>
-          ARK: Survival Evolved
-        </Typography>
-        <Box sx={{ mt: 2 }} />
-        <ArkServersTable />
-        <Box sx={{ mt: 6 }} />
-        <Typography variant='h5' component='h3'>
-          Terraria
-        </Typography>
-        <Box sx={{ mt: 2 }} />
-        <TerrariaServersTable />
-        <Box sx={{ mt: 6 }} />
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={4}>
+            <Typography variant='h5' component='h3'>
+              Minecraft（Java版）
+            </Typography>
+            <Box sx={{ mt: 2 }} />
+            <MinecraftJavaServersTable />
+            <Box sx={{ mt: 6 }} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Typography variant='h5' component='h3'>
+              Minecraft（Bedrock版）
+            </Typography>
+            <Box sx={{ mt: 2 }} />
+            <MinecraftBedrockServersTable />
+            <Box sx={{ mt: 6 }} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Typography variant='h5' component='h3'>
+              ARK: Survival Evolved
+            </Typography>
+            <Box sx={{ mt: 2 }} />
+            <ArkServersTable />
+            <Box sx={{ mt: 6 }} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Typography variant='h5' component='h3'>
+              Terraria
+            </Typography>
+            <Box sx={{ mt: 2 }} />
+            <TerrariaServersTable />
+            <Box sx={{ mt: 6 }} />
+          </Grid>
+        </Grid>
       </Container>
     </div>
   )
